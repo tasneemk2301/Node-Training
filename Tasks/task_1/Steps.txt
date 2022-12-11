@@ -1,0 +1,15 @@
+package.json to hold metadata
+    install all dependencies mentioned in package.json
+    cd to/path/where/package.json
+    $ npm i 
+
+npm is used to install dependencies as dev-dep or dep 
+
+create node project
+    initialize project using npm
+        $ npm init -y
+
+"scripts": {
+    "start": "node main",
+    "start:dev": "nodemon main"
+  },

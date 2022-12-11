@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/v1/movies
+
+### 
+
+POST http://localhost:3000/api/v1/movies
+content-type: application/json
+
+{"title": "Babaji", "director": "babaji", "rating": 1.1}
+
+###
+
+DELETE http://localhost:3000/api/v1/movies/24
+

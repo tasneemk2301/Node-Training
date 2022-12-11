@@ -1,0 +1,40 @@
+// get all resources
+GET http://localhost:3000/items
+
+###
+
+# to submit resource
+POST http://localhost:3000/items
+content-type: application/json
+
+{
+    "name": "comic book",
+    "price": "12.5",
+    "manuf": "ChandPublisher",
+    "md": "31/12/2021"
+}
+
+###
+// update resource
+PUT http://localhost:3000/items/update/25
+content-type: application/json
+
+{
+    "id": 25,
+    "name": "comic book",
+    "price": "12.5",
+    "manuf": "ChandPublisher",
+    "md": "31/12/2021"
+}
+
+###
+// delete resource
+DELETE http://localhost:3000/items/delete/1
+
+###
+// find unique resource by id
+GET http://localhost:3000/items/findById/25
+
+###
+// find  resources by price
+GET http://localhost:3000/items/findByPrice/12.5

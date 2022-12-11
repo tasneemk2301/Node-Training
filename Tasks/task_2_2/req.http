@@ -1,0 +1,19 @@
+GET http://localhost:9000/items
+
+###
+GET http://localhost:9000/firstItem
+
+###
+
+POST http://localhost:9000/saveItem
+content-type: application/json
+
+{
+  "id": 99,
+  "name": "bike",
+  "price": 74000,
+  "rating": 4.6
+}
+
+###
+

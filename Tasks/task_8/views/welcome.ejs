@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h3>Welcome</h3>
+
+    <table>
+        <tr>
+          <th>S.No.</th>
+          <th>Owner</th>
+          <th>Thought</th>
+        </tr>
+        <% results.forEach(function(result){ %>
+            <tr>
+                <td> <%= result.sno %> </td>
+                <td> <%= result.owner %> </td>
+                <td> <%= result.thought %> </td>
+            </tr>
+        <% }) %>
+        
+    </table>
+    <br/><br/>
+
+    <h4>Have a thought ..?</h4>
+
+    <form action="http://localhost:3000/welcome" method="POST">
+
+        <label for="owner">Owner:</label>
+        <input type="text" name="owner" id="owner"/>
+        <br/><br/>
+
+        <label for="thought">Thought:</label>
+        <input type="text" name="thought" id="thought"/>
+        <br/><br/>
+
+        <input type="submit" value="Post New Thought"/>
+    </form>
+
+    <p class="error"><%= errorMessage %></p>
+
+
+</body>
+</html>
